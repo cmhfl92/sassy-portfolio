@@ -1,11 +1,16 @@
 $font: #181f41
+$sectioncolor: #573230
+$textcontent: 'Source Sans Pro'
+$textheader: 'Montserrat'
+
 
 body
   margin: 0
   font-family: sans-serif
-  background-color: #ebe9dc
+  // background: url(http://ibscom.co.uk/wp-content/themes/Millis%20Theme/img/office.jpg)
+  // background-attachment: fixed
 
-  ul
+  ul.tab
     list-style: none
     display: flex
     justify-content: space-around
@@ -20,7 +25,7 @@ body
     // top: 0
 
     li
-      font-family: 'Source Sans Pro'
+      font-family: $textcontent
 
     &:hover
       cursor: pointer
@@ -29,10 +34,40 @@ body
   h1
     text-align: center
     color:  $font
+    padding-top: 2em
+    font-size: 4em
+    font-family: $textheader
+  h2
+    color: $font
+    text-align: center
+    font-size: 2em
+    font-family: $textheader
 
+  section
 
+    ul.portfolio
+      list-style: none
+      display: flex
+      justify-content: space-around
+      flex-wrap: wrap
+      // could I have used mixins for these li?
+      li.port1
+        background-color: lighten($sectioncolor, 40%)
+        padding: 5em
+        border-color: solid $sectioncolor
+        border-radius: 1em
 
+      li.port2
+        background-color: lighten($sectioncolor, 40%)
+        padding: 5em
+        border-color: solid $sectioncolor
+        border-radius: 1em
 
-  // h1
-  //   text-align: center
-  //
+      li.port3
+        background-color: lighten($sectioncolor, 40%)
+        padding: 5em
+        border-color: solid $sectioncolor
+        border-radius: 1em
+
+  footer
+    background-image: url(http://ibscom.co.uk/wp-content/themes/Millis%20Theme/img/office.jpg)
